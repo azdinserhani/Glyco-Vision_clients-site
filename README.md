@@ -61,6 +61,7 @@ Glyco Vision is a comprehensive web application designed to help users track and
   - Node.js
   - Express.js
   - PostgreSQL
+  - repo: https://github.com/azdinserhani/Glyco-Vision-Backend-side.git
 
 - **APIs:**
   - APIMedic Symptom Checker API
