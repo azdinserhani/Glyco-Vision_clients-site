@@ -1,0 +1,112 @@
+@use "../../../public/colors.scss" as *;
+
+.register {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .container {
+    background-color: $main-color;
+    height: 570px;
+    width: 400px;
+    padding: 5px 40px;
+    position: relative;
+    border-radius: 10px;
+    background: linear-gradient(
+        rgba(165, 239, 250, 0.5),
+        rgba(165, 239, 250, 0.5)
+      ),
+      url("../../../public/doctor.jpeg") center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo {
+      img {
+        height: 200px;
+        width: 200px;
+        margin-top: -50px;
+      }
+    }
+
+    .info {
+      width: 100%;
+      margin-top: -50px;
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        .input {
+          width: 100%;
+          align-self: flex-start;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          label {
+          }
+          .input-area {
+            position: relative;
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+            box-shadow: 24px 27px 24px -18px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 24px 27px 24px -18px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 24px 27px 24px -18px rgba(0, 0, 0, 0.75);
+            i {
+              position: absolute;
+              left: 5px;
+              color: $main-color;
+            }
+            .eye {
+              bottom: 2px;
+              left: 280px;
+            }
+            input {
+              border: none;
+              outline: none;
+              padding: 10px 10px 10px 30px; /* Adjust left padding to make space for the icon */
+              width: 100%;
+            }
+            select {
+              width: 100%;
+              border: none;
+              outline: none;
+              padding: 10px 10px 10px 30px; /* Adjust left padding to make space for the icon */
+              width: 100%;
+            }
+          }
+        }
+        .personne {
+          display: flex;
+          gap: 20px;
+        }
+        button {
+          width: 40%;
+          padding: 10px;
+          background-color: $main-color;
+          border: none;
+          border-radius: 10px;
+          font-size: 18px;
+          box-shadow: 24px 27px 24px -18px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: 24px 27px 24px -18px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 24px 27px 24px -18px rgba(0, 0, 0, 0.75);
+        }
+      }
+    }
+    p {
+      margin-top: 20px;
+      span {
+        margin-left: 10px;
+        background-color: $main-color;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: black;
+      }
+    }
+  }
+}
