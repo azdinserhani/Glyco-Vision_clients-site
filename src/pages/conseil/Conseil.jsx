@@ -3,9 +3,11 @@ import "./Consiel.scss";
 import Select from "react-select";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
+import {motion} from "framer-motion"
 
 const Conseil = () => {
   const [options, setOptions] = useState([]);
+  const [open, setOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const [data, setData] = useState([]);
   const [inputs, setInputs] = useState({
@@ -168,6 +170,8 @@ const Conseil = () => {
       <div className="data-conseil">
         {data &&
           data.map((item, index) => (
+            
+
             <div className="info" key={index} data-aos="fade-down-right">
               <div className="card">
                 <h2>Nom:</h2>

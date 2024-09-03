@@ -1,103 +1,136 @@
 @import "../../app.scss";
 
 .conseil {
-    @include themify($themes) {
-  width: 100%;
-  display: flex;
-  padding-bottom: 100px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 50px;
-  background-color: themed("bg");
-  color: themed("textColor");
-  .head{
+  @include themify($themes) {
+    width: 100%;
     display: flex;
-    align-items: center;
-    height:calc(100vh - 70px);
-.container {
-    background-color: #30a7ad69;
-    height: 600px;
-    width: 500px;
-    display: flex;
-    align-items: center;
+    padding-bottom: 100px;
     justify-content: center;
-    border-radius: 35px;
-   
-    form {
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    background-color: themed("bg");
+    color: themed("textColor");
+    .head {
+      display: flex;
+      align-items: center;
+      height: calc(100vh - 70px);
+      .container {
+        background-color: #30a7ad69;
+        height: 600px;
+        width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 35px;
+        @include mobile {
+          width: 80vw;
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 35px;
+          @include mobile {
+            width: 100%;
+            padding: 10px;
+          }
+          .input {
+            p {
+              font-size: 25px;
+              font-weight: 500;
+              margin-bottom: 10px;
+            }
+            .select {
+              color: themed("textColor");
+              font-size: 25px;
+              height: 60px;
+            }
+            input {
+              width: 430px;
+              outline: none;
+              border: none;
+              font-size: 25px;
+              padding: 10px 40px;
+              border-radius: 22px;
+              height: 60px;
+              @include mobile {
+                width: 100%;
+                padding: 10px;
+              }
+            }
+            select {
+              width: 430px;
+              outline: none;
+              border: none;
+              font-size: 25px;
+              padding: 10px 40px;
+              border-radius: 22px;
+              height: 60px;
+              @include mobile {
+                width: 100%;
+                padding: 10px;
+              }
+            }
+          }
+          button {
+            width: 430px;
+            height: 57px;
+            border: none;
+            border-radius: 15px;
+            background-color: #30a6ad;
+            color: white;
+            font-size: 32px;
+            @include mobile {
+              width: 100%;
+              padding: 10px;
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+
+    .data-conseil {
+      display: grid;
+      grid-template-columns: 500px 500px;
+      gap: 20px;
+      background-color: themed("bg");
+      @include mobile {
+        grid-template-columns: 90vw;
+      }
+      .info {
+        background-color: #1d5359;
+        padding: 50px;
+        border-radius: 50px;
         display: flex;
         flex-direction: column;
-        gap: 35px;
-      .input {
-        p {
-          font-size: 25px;
-          font-weight: 500;
-          margin-bottom: 10px;
+        gap: 30px;
+        @include mobile {
+          width: 100%;
+          padding: 10px;
+          
         }
-        .select{
-           color: themed("textColor");
+        .card {
+           @include mobile {
+            width: 100%;
+            padding: 10px;
+          }
+          h2 {
+            color: #08d2e9;
+            font-size: 32px;
+          }
+          p {
+            padding-left: 20px;
             font-size: 25px;
-            height: 60px;
-        }
-        input {
-          width: 430px;
-          outline: none;
-          border: none;
-          font-size: 25px;
-          padding: 10px 40px;
-          border-radius: 22px;
-          height: 60px;
-        }
-        select {
-          width: 430px;
-          outline: none;
-          border: none;
-          font-size: 25px;
-          padding: 10px 40px;
-          border-radius: 22px;
-          height: 60px;
-        }
-        
-      }
-      button{
-           width: 430px; 
-           height: 57px;
-           border: none;
-           border-radius: 15px;
-           background-color: #30A6AD;
-           color: white;
-           font-size: 32px;
-        }
-    }
-  }
-  }
-  
-  .data-conseil{
-    
-    display: grid;
-    grid-template-columns: 500px 500px ;
-    gap: 20px;
-    background-color: themed("bg");
-    .info{
-      background-color: #1D5359;
-      padding: 50px;
-      border-radius: 50px;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      .card{
-        
-        h2{
-          color: #08D2E9;
-          font-size: 32px;
-        }
-        p{
-          padding-left: 20px;
-          font-size: 25px;
-          color: #FFFFFF;
+            color: #ffffff;
+            @include mobile {
+              width: 100%;
+            padding-left: 0px;
+            overflow: hidden;
+            }
+          }
         }
       }
     }
   }
-}
 }

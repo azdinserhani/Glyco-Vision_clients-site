@@ -150,7 +150,7 @@ const Tonsion = () => {
           size: 25,
         },
       },
-    }
+    },
   };
   return (
     <div className="track-tension">

@@ -1,0 +1,20 @@
+    .info{
+      background-color: #1D5359;
+      padding: 50px;
+      border-radius: 50px;
+      display: flex;
+      // flex-direction: column;
+      gap: 30px;
+      .card{
+        
+        h2{
+          color: #08D2E9;
+          font-size: 32px;
+        }
+        p{
+          padding-left: 20px;
+          font-size: 25px;
+          color: #FFFFFF;
+        }
+      }
+    }
